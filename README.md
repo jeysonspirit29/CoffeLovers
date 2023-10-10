@@ -4,7 +4,7 @@
 ## Contenido
 
 - **Proyecto Backend**: 
-	- Se creó una solución e implementó una solución con arquitectura limpia y buenas prácticas de desarrollo con .NET 7.
+	- Se creó un proyecto e implementó una solución con arquitectura limpia y buenas prácticas de desarrollo con .NET 7.
 	- Se creó un proyecto para las pruebas unitarias con XUnit.
 	> Frameworks y librerías usadas: EF Core, MediatR, Migrations, FluentValidations, Identity, ErrorOr, Automapper, Swagger, Moq y FluentAssertions.
 
