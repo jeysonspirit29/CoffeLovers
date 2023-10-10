@@ -21,6 +21,7 @@ La base de datos usada es InMemory Localhost.
 |3|Enviar orden a cocina.     |Empleado           |
 |4|Entregar orden a usuario.|Empleado|
 |5|Cobrar orden|Supervisor, Administrador|
+ 
  **Importante**: Sobre el caso de uso 2:  
  
  - Los usuarios solo pueden las ordenes creadas por ellos mismos.
