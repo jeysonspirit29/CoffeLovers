@@ -39,7 +39,7 @@ La contraseña para todos es: abc123.
  	
 ## Diagrama Entidad Relación
 
-![alt text](https://i.ibb.co/TgWyvNh/imagen-2023-10-10-163346285.png)
+![alt text](https://i.ibb.co/m581r1r/imagen-2023-10-10-175600567.png)
 
 ## Levantar el proyecto
 
