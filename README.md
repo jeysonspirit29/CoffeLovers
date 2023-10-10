@@ -29,7 +29,7 @@ La base de datos usada es InMemory Localhost.
  - Los supervisores solo pueden ver las ordenes de los empleados que tienen a cargo.
  - El administrador puede ver todas las ordenes.
 
- **Puede utilizar los siguiente usuarios pre-cargados**:
+ **Puede utilizar los siguientes usuarios pre-cargados**:
  - **Rol usuario**: user1, user2, user3, user4 y user5.
  - **Rol empleado**: employee1, employee2 y employee3.
  - **Rol supervisor**: supervisor1 (jefe de employee1 y employee2) y supervisor2 (jefe de employee3) .
