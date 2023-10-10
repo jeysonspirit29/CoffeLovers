@@ -1,0 +1,11 @@
+form {
+    border: 1px solid black;
+    width: 100%;
+    padding: 1rem;
+    /* text-align: center; */
+}
+
+table {
+    width: 100%;
+}
+

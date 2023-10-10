@@ -1,0 +1,74 @@
+
+<div style="text-align: left;">
+    <ul style="text-align: left;">
+        <li><b>Peding:</b> Orden creada.</li>
+        <li><b>InProgress:</b> Orden enviada a cocina.</li>
+        <li><b>Delivered:</b> Orden entregada al usuario.</li>
+        <li><b>Completed:</b> Orden cobrada.</li>
+    </ul>
+</div>
+<h3>Mis ordenes</h3>
+<div class="row">
+    <div class="col-8">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th [width]="50">Código Orden</th>
+                    <th [width]="150">Cliente</th>
+                    <th [width]="150">Empleado</th>
+                    <th [width]="100">Estado</th>
+                    <th [width]="100">Fecha Creación</th>
+                    <th [width]="90">Impuesto %</th>
+                    <th [width]="150">Monto Total</th>
+                    <th [width]="400">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orders">
+                    <td>{{order.id}}</td>
+                    <td>{{order.requestingUser}}</td>
+                    <td>{{order.attentionUser}}</td>
+                    <td><span style="background-color: orange;color: white; padding: 5px;border-radius: 3px;">{{order.orderStatus}}</span> </td>
+                    <td>{{order.dateCreated | date: 'dd/MM/yyyy'}}</td>
+                    <td>{{order.taxPercentage |  number : '1.2-2'}}</td>
+                    <td>{{order.totalOrderAmount | currency:'S/ ':'symbol'}}</td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" (click)="showDetail(order.id)" >Ver</button>
+                        
+                        <button class="btn btn-primary btn-sm" style="margin-left: 5px;" 
+                        (click)="changeOrderStatusToInProgress(order.id)" *ngIf="visibleAttention(order.orderStatus)" >Enviar a cocina</button>
+
+                        <button class="btn btn-danger btn-sm" style="margin-left: 5px;" 
+                        (click)="changeOrderStatusToDelivered(order.id)" *ngIf="visibleDelivery(order.orderStatus)" >Entregar</button>
+
+                        <button class="btn btn-success btn-sm" style="margin-left: 5px;" 
+                        (click)="changeOrderStatusToComplete(order.id)" *ngIf="visibleComplete(order.orderStatus)" >Cobrar</button>
+
+                    </td>
+                 </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-4">
+        <table>
+            <thead>
+                <tr>
+                    <th [width]="50">Producto</th>
+                    <th [width]="150">Precio</th>
+                    <th [width]="150">Cantidad</th>
+                    <th [width]="150">Foto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let orderDetail of orderDetails">
+                    <td>{{orderDetail.product}}</td>
+                    <td>{{orderDetail.quantity |number : '1.2-2'}}</td>
+                    <td>{{orderDetail.price | currency:'S/ ':'symbol'}}</td>
+                    <td><img [width]="150" [height]="150" src={{orderDetail.productPhotoURL}}></td>
+                 </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+

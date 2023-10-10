@@ -1,0 +1,31 @@
+<form role="form" (submit)="login()">
+    <table>
+        <thead>
+            <tr>
+                <th>Login</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><label for="username">Usuario</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="username" [(ngModel)]="credentials.username"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Contraseña</label></td>
+            </tr>
+            <tr>
+                <td><input type="password" name="password" [(ngModel)]="credentials.password"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><input type="submit" value="Login" class="btn btn-primary"></td>
+            </tr>
+        </tfoot>
+    </table>
+</form>
+<div *ngIf="errorLoginMessage" class="alert alert-danger">
+    <h4>{{errorLoginMessage}}</h4>
+</div>

@@ -1,0 +1,10 @@
+.container-product {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product-item {
+    flex: 1 0 21%; /* explanation below */
+    margin: 5px;
+    height: 300px;
+  }
