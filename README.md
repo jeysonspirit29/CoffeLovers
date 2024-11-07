@@ -1,4 +1,4 @@
-# CoffeLovers - Desafío técnico
+# CoffeLovers
 
 
 ## Contenido
